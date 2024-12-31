@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Govee Showcase</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Govee Showcase</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+       <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle rounded-0" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                       Shop</a>
+                    <ul class="dropdown-menu dropdown-menu-lg-end rounded-0" aria-labelledby="navbarDropdown">
+                         <li><a class="dropdown-item" href="#new">New Arrivals</a></li>
+                          <li><a class="dropdown-item" href="#">Best Sellers</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#allpro">All Products</a></li>
+                    </ul>
+              <li class="nav-item">
+                <a class="nav-link" href="#info">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="btn btn-primary position-relative"
+                  data-bs-toggle="modal"
+                  data-bs-target="#cartModal"
+                >
+                  Cart
+                  <span
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                  >
+                    0
+                    <span class="visually-hidden">unread messages</span>
+                  </span>
+                </a>
+                <div
+                  class="modal fade"
+                  id="cartModal"
+                  tabindex="-1"
+                  aria-labelledby="cartModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="cartModalLabel">
+                          Your Cart
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th scope="col">Product</th>
+                              <th scope="col">Price</th>
+                              <th scope="col">Quantity</th>
+                              <th scope="col">Total</th>
+                            </tr>
+                          </thead>
+                          <tbody id="cartItems">
+                            <!-- Cart items will be added here -->
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-secondary"
+                          data-bs-dismiss="modal"
+                        >
+                          Close
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-primary"
+                          onclick="clearCart(); alert('Order sent forward')"
+                        >
+                          Checkout
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Cart Modal -->
+
+      <!-- Add this script to your script.js file -->
+
+      <div
+        id="carouselExampleControls"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="./headimages/image1.jpeg"
+              class="d-block w-100 carousel-image"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./headimages/image2.jpeg"
+              class="d-block w-100 carousel-image"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./headimages/image3.jpeg"
+              class="d-block w-100 carousel-image"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./headimages/image4.jpeg"
+              class="d-block w-100 carousel-image"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./headimages/image5.jpeg"
+              class="d-block w-100 carousel-image"
+              alt="..."
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <script></script>
+    </header>
+    <main>
+             <!-- new lauch products  -->
+      <section class="product-gallery">
+       
+
+        
+        <h1 id="new" class="text-center">Recent Launched Products</h1>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card product-card">
+                <div class="card-body">
+                  <img src="./productimage/buds.webp" class="card-img-top" alt="..." />
+
+                  <h5 class="card-title"> Boat Music Box</h5>
+                  <p class="card-text">$16.44</p>
+                  <a href="#" class="btn btn-primary">Shop Now</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card product-card">
+                <div class="card-body">
+                  <img src="./productimage/watch.webp" class="card-img-top" alt="..." />
+
+                  <h5 class="card-title">
+                    Fastrack Watch
+                  </h5>
+                  <p class="card-text">$9.33</p>
+                  <a href="#" class="btn btn-primary">Shop Now</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card product-card">
+                <div class="card-body">
+                  <img src="./productimage/vr.webp" class="card-img-top" alt="..." />
+
+                  <h5 class="card-title">VR Box</h5>
+                  <p class="card-text">$20.99</p>
+                  <a href="#" class="btn btn-primary">Shop Now</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card product-card">
+                <div class="card-body">
+                  <img src="./productimage/camera.jpeg" class="card-img-top" alt="..." />
+
+                  <h5 class="card-title">Canon Camera</h5>
+                  <p class="card-text">$60.88</p>
+                  <a href="#" class="btn btn-primary">Shop Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+
+      <!-- littlr info  -->
+    <section class="about-shop">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+        <h2 id="info" class="text-center">About Our Shop</h2>
+        <p class="text-justify">
+          At Govee Showcase, we're passionate about providing the best
+          smart home solutions for our customers. Our mission is to make
+          smart home technology accessible and affordable for everyone. We
+          believe that smart home devices should be easy to use,
+          energy-efficient, and enhance the overall quality of life.
+        </p>
+      </div>
+      <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+        <h2 class="text-center">Our Marketing Thoughts</h2>
+        <p class="text-justify">
+          We're committed to building a strong online presence and
+          engaging with our customers through social media and email
+          marketing. Our goal is to create a community of smart home
+          enthusiasts who share our passion for innovative technology and
+          sustainable living. We're always looking for new ways to improve
+          our marketing strategies and stay ahead of the curve in the
+          ever-evolving world of smart home technology.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <!-- Main shop page  -->
+
+      <section  id="shopping" class="product-gallery">
+       
+
+        <h1 id="allpro" class="text-center">Shopping Products</h1>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card product-card">
+                <div class="card-body">
+                  <img src="./productimage/themstate.jpeg" class="card-img-top" alt="..." />
+
+                  <h5 class="card-title">Smart thermostat</h5>
+                  <p class="card-text">$8.99</p>
+                  <a href="#" class="btn btn-primary">Shop Now</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card product-card">
+                <div class="card-body">
+                  <img src="./productimage/action.jpeg" class="card-img-top" alt="..." />
+
+                  <h5 class="card-title">
+                    Action Camera
+                  </h5>
+                  <p class="card-text">$400.99</p>
+                  <a href="#" class="btn btn-primary">Shop Now</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card product-card">
+                <div class="card-body">
+                  <img src="./productimage/tv.jpeg" class="card-img-top" alt="..." />
+
+                  <h5 class="card-title">LG TV</h5>
+                  <p class="card-text">$399.99</p>
+                  <a href="#" class="btn btn-primary">Shop Now</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card product-card">
+                <div class="card-body">
+                  <img src="./productimage/phones.jpeg" class="card-img-top" alt="..." />
+
+                  <h5 class="card-title">Iphone </h5>
+                  <p class="card-text">$699.99</p>
+                  <a href="#" class="btn btn-primary">Shop Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card product-card">
+                <div class="card-body">
+                  <img src="./productimage/tablet.jpeg" class="card-img-top" alt="..." />
+
+                  <h5 class="card-title">Tablet</h5>
+                  <p class="card-text">$499.99</p>
+                  <a href="#" class="btn btn-primary">Shop Now</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card product-card">
+                <div class="card-body">
+                  <img src="./productimage/gaming.jpeg" class="card-img-top" alt="..." />
+
+                  <h5 class="card-title">
+                    Gaming Console
+                  </h5>
+                  <p class="card-text">$599.99</p>
+                  <a href="#" class="btn btn-primary">Shop Now</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card product-card">
+                <div class="card-body">
+                  <img src="./productimage/ereader.jpeg" class="card-img-top" alt="..." />
+
+                  <h5 class="card-title">E-Reader</h5>
+                  <p class="card-text">$299.99</p>
+                  <a href="#" class="btn btn-primary">Shop Now</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card product-card">
+                <div class="card-body">
+                  <img src="./productimage/power.jpeg" class="card-img-top" alt="..." />
+
+                  <h5 class="card-title">Power Bank</h5>
+                  <p class="card-text">$109.99</p>
+                  <a href="#" class="btn btn-primary">Shop Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card product-card">
+                <div class="card-body">
+                  <img src="./productimage/alexa.jpeg" class="card-img-top" alt="..." />
+
+                  <h5 class="card-title">Alexa</h5>
+                  <p class="card-text">$400.99</p>
+                  <a href="#" class="btn btn-primary">Shop Now</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card product-card">
+                <div class="card-body">
+                  <img src="./productimage/fitness.jpeg" class="card-img-top" alt="..." />
+
+                  <h5 class="card-title">
+                    Fitness Tracker
+                  </h5>
+                  <p class="card-text">$64.99</p>
+                  <a href="#" class="btn btn-primary">Shop Now</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card product-card">
+                <div class="card-body">
+                  <img src="./productimage/washing.jpeg" class="card-img-top" alt="..." />
+
+                  <h5 class="card-title">Washing Machine</h5>
+                  <p class="card-text">$399.99</p>
+                  <a href="#" class="btn btn-primary">Shop Now</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card product-card">
+                <div class="card-body">
+                  <img src="./productimage/fan.jpeg" class="card-img-top" alt="..." />
+
+                  <h5 class="card-title">Table Fan</h5>
+                  <p class="card-text">$79.99</p>
+                  <a href="#" class="btn btn-primary">Shop Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+  
+    
+ <section id="contact" class="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 border p-5">
+        <h2 class="text-center">Contact Us !!</h2>
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" class="form-control" id="name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message:</label>
+            <textarea class="form-control" id="message" rows="3" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" onclick="alert('We will contact you ASAP'); return false;">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+     
+<footer>
+    <div class="text-center p-3" style="background-color: black; color: white;">
+  <div class="container p-4">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase">About Us</h5>
+        <p>
+          At Govee Showcase, we're passionate about providing the best
+          smart home solutions for our customers.
+        </p>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Contact Us</h5>
+        <p><i class="fas fa-envelope me-3"></i> info@goveeshowcase.com</p>
+        <p><i class="fas fa-phone me-3"></i> + 01 234 567 89</p>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Social Media</h5>
+        <p><i class="fab fa-facebook me-3"></i> Facebook</p>
+        <p><i class="fab fa-twitter me-3"></i> Twitter</p>
+        <p><i class="fab fa-instagram me-3"></i> Instagram</p>
+      </div>
+    </div>
+  </div>
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+    &copy; 2023 Govee Showcase. All rights reserved.
+  </div>
+</div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+
+  </body>
+</html>
